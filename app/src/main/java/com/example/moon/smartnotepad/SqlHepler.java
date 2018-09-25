@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Vibrator;
 import android.provider.ContactsContract;
+import android.util.Log;
+import android.widget.Toast;
 
 import javax.xml.validation.Validator;
 
@@ -64,8 +66,13 @@ public class SqlHepler extends SQLiteOpenHelper {
 
     public int delete(int id){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        int deleted = sqLiteDatabase.delete(DatabaseNames.TABLE_NAME, " id = ? ", new String[]{String.valueOf(id)});
-        return deleted;
+        try {
+            int deleted = sqLiteDatabase.delete(DatabaseNames.TABLE_NAME, " id = ? ", new String[]{String.valueOf(id)});
+            return deleted;
+        }catch (Exception e){
+           Log.i("databaseUpdate",e.toString());
+           return 0;
+        }
 
     }
 

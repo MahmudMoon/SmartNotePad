@@ -206,9 +206,16 @@ public class MainActivity extends AppCompatActivity {
                 int deleted =  sqlHepler.delete(objectForNotes.getId());
                Toast.makeText(getApplicationContext(),String.valueOf(deleted),Toast.LENGTH_SHORT).show();
             }
+            needToBeDeleted.clear();
            Intent intent = new Intent(MainActivity.this,MainActivity.class);
             startActivity(intent);
         }
         return true;
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
     }
 }
