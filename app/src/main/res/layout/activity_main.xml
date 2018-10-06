@@ -25,6 +25,7 @@
             android:clickable="true"
             android:foregroundGravity="bottom"
             android:src="@drawable/ic_add_circle_outline_black_24dp"
+            android:scaleType="centerCrop"
 
             />
 

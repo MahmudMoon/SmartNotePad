@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_margin="8dp"
-        app:cardBackgroundColor="#fff"
+        app:cardBackgroundColor="#fdd98a"
         card_view:cardElevation="2dp"
         card_view:cardUseCompatPadding="true">
 
@@ -28,7 +28,7 @@
                 android:id="@+id/tv_title"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.4"
+                android:layout_weight="0.6"
                 android:autoSizeTextType="uniform"
                 android:gravity="center"
                 android:text="DEmo TITE"
@@ -40,7 +40,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="8dp"
-                android:layout_weight="0.4"
+                android:layout_weight="0.3"
                 android:gravity="right"
                 android:text="23/09/20018"
                 android:textColor="#000"
@@ -54,6 +54,7 @@
                 android:layout_weight="0.1"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
+                android:background="#fdd98a"
                />
 
 
